@@ -571,6 +571,11 @@ static CGFloat AttachmentRunDelegateGetWidth(void *refCon) {
 
 }
 
+- (CGRect)contentFrame {
+	CGPathRef framePath = CTFrameGetPath(_frame);
+	return CGPathGetBoundingBox(framePath);
+}
+
 - (void)drawContentInRect:(CGRect)rect {    
 
     [[UIColor colorWithRed:0.8f green:0.8f blue:0.8f alpha:1.0f] setFill];

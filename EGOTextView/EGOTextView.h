@@ -122,4 +122,6 @@ extern NSString * const EGOTextAttachmentPlaceholderString;
 
 - (BOOL)hasText;
 
+- (CGRect)contentFrame;
+
 @end
